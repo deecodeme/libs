@@ -1,2 +1,13 @@
 rootProject.name = 'libs'
+include 'datetime'
 
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('lombok', '1.18.24')
+            library('lombok', 'org.projectlombok', 'lombok').versionRef('lombok')
+            library('jupiter', 'org.junit.jupiter:junit-jupiter-api:5.8.1')
+            library('hamcrest', 'org.hamcrest:hamcrest:2.2')
+        }
+    }
+}
