@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.deecodeme.libs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(libs.lombok)
+    annotationProcessor(libs.lombok)
+
+    testCompileOnly(libs.lombok)
+    testImplementation(libs.hamcrest)
+    testAnnotationProcessor(libs.lombok)
+    testImplementation(libs.jupiter)
+    testRuntimeOnly(libs.jupiter)
+}
+
+test {
+    useJUnitPlatform()
+}
+
