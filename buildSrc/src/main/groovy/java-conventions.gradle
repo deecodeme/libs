@@ -12,13 +12,16 @@ repositories {
 
 dependencies {
     implementation(libs.lombok)
+    implementation(libs.sl4j)
+    implementation(libs.log4j2.sl4j)
+    implementation(libs.log4j2.core)
+    implementation(libs.log4j2.api)
     annotationProcessor(libs.lombok)
-
     testCompileOnly(libs.lombok)
     testImplementation(libs.hamcrest)
     testAnnotationProcessor(libs.lombok)
     testImplementation(libs.jupiter)
-    testRuntimeOnly(libs.jupiter)
+    testRuntimeOnly(libs.jupiter.engine)
 }
 
 test {
